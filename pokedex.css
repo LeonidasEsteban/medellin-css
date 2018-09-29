@@ -20,10 +20,12 @@ body {
   perspective: 1000px;
 }
 
+.pokedex.is-active .pokedex-right-back,
 .pokedex:hover .pokedex-right-back {
   transform: rotateY(0);
 }
 
+.pokedex.is-active .pokedex-right-front,
 .pokedex:hover .pokedex-right-front {
   transform: rotateY(180deg);
 }
@@ -43,6 +45,8 @@ body {
   backface-visibility: hidden;
   border: 1px solid black;
   box-sizing: border-box;
+  display: flex;
+  padding: 20px;
 }
 
 .pokedex-right-front {
@@ -131,6 +135,13 @@ body {
   position: absolute;
   left: 100%;
   top: 0;
-  filter: drop-shadow(1px -1px 0 black)
+  filter: drop-shadow(1px -1px 0 black);
+}
 
+.chart {
+  background-color: white;
+  flex-grow: 1;
+  border-radius: 10px;
+  border: 3px solid black;
+  padding: 10px;
 }
