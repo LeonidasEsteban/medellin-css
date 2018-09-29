@@ -1,0 +1,42 @@
+body {
+  color: white;
+}
+
+.pokedex {
+  background: red;
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.pokedex:hover .pokedex-front {
+  transform: rotateY(0);
+}
+
+.pokedex-front {
+  background-color: blue;
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  /* left right top bottom z-index */
+  left: 100%;
+  top: 0;
+  z-index: 2;
+  transform-origin: left center;
+  transform: rotateY(-180deg);
+  transition: 1s;
+}
+
+.pokedex-back {
+  background-color: pink;
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+
+}
